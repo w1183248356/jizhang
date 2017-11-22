@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--时间轴-->
+    <declare-styleable name="gestureLock">
+        <!--行数-->
+        <attr name="gl_rows" format="integer"/>
+        <!--列数-->
+        <attr name="gl_lines" format="integer"/>
+        <!--圆圈半径-->
+        <attr name="gl_radiusCircle" format="dimension"/>
+        <!--圈中圆点半径-->
+        <attr name="gl_radiusDot" format="dimension"/>
+        <!--至少连接多少个点-->
+        <attr name="gl_smallestPoints" format="integer"/>
+
+        <!--圆圈正常颜色-->
+        <attr name="gl_circle_color_normal" format="color"/>
+        <!--圆圈按下颜色-->
+        <attr name="gl_circle_color_pressed" format="color"/>
+        <!--圆圈错误颜色-->
+        <attr name="gl_circle_color_error" format="color"/>
+
+        <!--圆点按下颜色-->
+        <attr name="gl_dot_color_pressed" format="color"/>
+        <!--圆点错误颜色-->
+        <attr name="gl_dot_color_error" format="color"/>
+
+        <!--连线按下颜色-->
+        <attr name="gl_line_color_pressed" format="color"/>
+        <!--连线错误颜色-->
+        <attr name="gl_line_color_error" format="color"/>
+
+        <!--圆圈的线宽-->
+        <attr name="gl_circle_stroke" format="dimension"/>
+        <!--圆圈的线宽-->
+        <attr name="gl_circle_stroke_pressed" format="dimension"/>
+        <!--连线的线宽-->
+        <attr name="gl_line_width" format="dimension"/>
+
+    </declare-styleable>
+
+</resources>

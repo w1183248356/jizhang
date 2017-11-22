@@ -1,3 +1,17 @@
 <resources>
-    <string name="app_name">jizhang</string>
+    <string name="app_name">OES高值跟踪</string>
+
+    <string name="drawer_close">关闭</string>
+    <string name="drawer_open">打开</string>
+
+    <string name="no_network">当前网络不可用</string>
+
+    <!-- Strings related to Settings -->
+    <string name="pref_title_ip">IP地址</string>
+    <string name="pref_default_ip">192.168.130.35</string>
+    <string name="pref_title_port">端口</string>
+    <string name="pref_default_port">8080</string>
+    <string name="pref_title_root">根目录</string>
+    <string name="pref_default_root">webServer</string>
+
 </resources>

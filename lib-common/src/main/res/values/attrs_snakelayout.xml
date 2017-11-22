@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="SnakeLayout">
+        <attr name="spaceVertical" format="dimension|reference" />
+        <attr name="spaceHorizontal" format="dimension|reference" />
+        <attr name="divider" format="reference" />
+        <attr name="divider_height" format="dimension|reference" />
+        <attr name="columnCount" format="integer" />
+        <attr name="direction" format="enum">
+            <enum name="Left_To_Right" value="1"/>
+            <enum name="Right_To_Left" value="2"/>
+            <enum name="Left_And_Right" value="3"/>
+        </attr>
+    </declare-styleable>
+</resources>

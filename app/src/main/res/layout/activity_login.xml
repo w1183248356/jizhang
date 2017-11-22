@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="32dp"
+                android:paddingRight="32dp">
+
+    <ImageView
+        android:id="@+id/iv_icon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/login_icon_marginTop"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:src="@drawable/ic_login_logo">
+    </ImageView>
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="医院高效运营管理系统"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:layout_below="@+id/iv_icon"/>
+
+        <EditText
+            android:layout_marginTop="@dimen/activity_horizontal_margin"
+            android:layout_below="@+id/tv_name"
+            android:id="@+id/et_account"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lines="1"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:hint="用户名"
+            android:padding="16dp"
+            android:textColorHint="#999"
+            android:textSize="18sp"
+            android:background="@drawable/bg_login_edit"/>
+        <EditText
+            android:layout_below="@id/et_account"
+            android:id="@+id/et_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:inputType="textPassword"
+            android:lines="1"
+            android:maxLines="1"
+            android:hint="密 码"
+            android:padding="16dp"
+            android:textColorHint="#999"
+            android:textSize="18sp"
+            android:background="@drawable/bg_login_edit"/>
+
+    <Button
+        android:id="@+id/btn_login"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/et_password"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:padding="18dp"
+        android:text="登 录"
+        android:textSize="18sp"/>
+    <TextView
+        android:id="@+id/btn_service"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="选择网络 >"
+        android:layout_marginBottom="8dp"
+        android:layout_below="@id/btn_login"
+        android:layout_alignRight="@id/btn_login"
+        android:textColor="@color/colorPrimary"
+        android:padding="8dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/activity_horizontal_margin"
+        android:orientation="vertical">
+        <ImageView
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/vh_logo"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <View
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                style="@style/DividerStyle.Horizontal.thin"
+                android:layout_width="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/tv_comp" />
+            <TextView
+                android:id="@+id/tv_comp"
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="北京东软望海科技有限公司"/>
+            <View
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                style="@style/DividerStyle.Horizontal.thin"
+                android:layout_width="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/tv_comp" />
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

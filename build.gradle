@@ -1,15 +1,44 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
+ext{
+    minSdkVersion=15
+    targetSdkVersion=24
+    compileSdkVersion=24
+    buildToolsVersion="26.0.3"
+
+    butterknifeVersion="5.1.1"
+    picassoVersion="2.3.2"
+    ottoVersion="1.3.5"
+    imagePickerVersion = "v1.1.4"
+    RTPermissionVersion = "1.0.0"
+
+    depends = [
+            ButterKnife:"com.jakewharton:butterknife:$butterknifeVersion",
+            Picasso:"com.squareup.picasso:picasso:$picassoVersion",
+            Otto:"com.squareup:otto:$ottoVersion",
+            ImagePicker:"com.github.LuckSiege:PictureSelectorLight:$imagePickerVersion",
+            RTPermission:"com.lwkandroid:RTPermissionLib:$RTPermissionVersion"
+    ]
+    supportLibraryVersion="25.1.1"
+    supports = [
+            AppCompat:"com.android.support:appcompat-v7:$supportLibraryVersion",
+            SupportV4:"com.android.support:support-v4:$supportLibraryVersion",
+            RecycleView:"com.android.support:recyclerview-v7:$supportLibraryVersion",
+            CardView:"com.android.support:cardview-v7:$supportLibraryVersion",
+            Design:"com.android.support:design:$supportLibraryVersion",
+            SupportVector: "com.android.support:support-vector-drawable:$supportLibraryVersion"
+    ]
+
+
+}
 
 buildscript {
-    
     repositories {
-        google()
         jcenter()
+        google()
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:3.0.1'
-        
-
+//        classpath 'org.greenrobot:greendao-gradle-plugin:3.2.1'
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
     }
@@ -17,11 +46,12 @@ buildscript {
 
 allprojects {
     repositories {
-        google()
         jcenter()
+        google()
     }
 }
 
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
+

@@ -2,5 +2,12 @@
 <resources>
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorAccent">#123aab</color>
+
+    <color name="translcucent">#99000000</color>
+
+    <color name="logout_color_text">#979da5</color>
+    <color name="logout_color_bg">#333d4d</color>
+
+    <color name="nodata_text_color">#889EB2</color>
 </resources>

@@ -1,0 +1,34 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="网络设置">
+
+
+    <EditTextPreference
+        android:capitalize="none"
+        android:defaultValue="@string/pref_default_ip"
+        android:inputType="textCapWords"
+        android:key="pref_server_ip"
+        android:maxLines="1"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:title="@string/pref_title_ip"/>
+    <EditTextPreference
+        android:capitalize="none"
+        android:defaultValue="@string/pref_default_port"
+        android:inputType="number"
+        android:key="pref_server_port"
+        android:maxLines="1"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:title="@string/pref_title_port"/>
+
+    <EditTextPreference
+        android:capitalize="none"
+        android:defaultValue="@string/pref_default_root"
+        android:inputType="textCapWords"
+        android:key="pref_server_root"
+        android:maxLines="1"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:title="@string/pref_title_root"/>
+
+</PreferenceScreen>

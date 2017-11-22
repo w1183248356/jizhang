@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--时间轴-->
+    <declare-styleable name="timesLine">
+        <!--时间轴节点数量-->
+        <attr name="dotCount" format="integer"/>
+        <!--时间轴节点颜色-->
+        <attr name="dotColor" format="color"/>
+        <!--时间轴节点半径-->
+        <attr name="dotRadius" format="dimension"/>
+        <!--时间轴节点图案-->
+        <attr name="dotDrawable" format="reference"/>
+        <!--时间轴连线颜色-->
+        <attr name="lineColor" format="color"/>
+        <!--时间轴连线宽度-->
+        <attr name="timeLineWidth" format="dimension"/>
+        <!--时间轴虚线每个点和间隔大小  只在lineMode是dash时生效-->
+        <attr name="dashSize" format="dimension"/>
+        <!--时间轴标题文字颜色-->
+        <attr name="textColorTitle" format="color"/>
+        <!--时间轴时间文字颜色-->
+        <attr name="textColorDate" format="color"/>
+        <!--时间轴文本大小  不单独设置标题和时间文字大小的话，按这个大小-->
+        <attr name="textSize" format="dimension"/>
+        <!--时间轴标题文字大小-->
+        <attr name="titleTextSize" format="dimension"/>
+        <!--时间轴时间文字大小-->
+        <attr name="dateTextSize" format="dimension"/>
+        <!--时间轴边距及行距-->
+        <attr name="lineGap" format="dimension"/>
+        <!--时间轴线型 ，实线solid    虚线dash-->
+        <attr name="lineMode">
+            <enum name="solid" value="0" />
+            <enum name="dash" value="1" />
+        </attr>
+
+    </declare-styleable>
+
+</resources>

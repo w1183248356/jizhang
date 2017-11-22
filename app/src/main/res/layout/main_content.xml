@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <!--<FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/main_tip_padding_horizontal"
+        android:paddingRight="@dimen/main_tip_padding_horizontal"
+        android:paddingTop="@dimen/main_tip_padding_vertical"
+        android:paddingBottom="@dimen/main_tip_padding_vertical"
+        android:background="@android:color/white">
+
+        <TextView
+            android:drawableLeft="@drawable/hi"
+            android:drawablePadding="8dp"
+            android:gravity="center_vertical"
+            android:id="@+id/tv_tip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="本院荣获本省文明创新医院"/>
+    </FrameLayout>-->
+
+    <android.support.v7.widget.RecyclerView
+        android:paddingTop="8dp"
+        android:id="@+id/menu_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
+    <!--<LinearLayout
+        android:background="@android:color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+        <com.viewhigh.finance.view.ItemMenuInMain
+            android:id="@+id/menu_todo"
+            style="@style/MainItemStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:item_icon="@drawable/main_todo"
+            app:item_tip="1"
+            app:item_title="待办"></com.viewhigh.finance.view.ItemMenuInMain>
+        <com.viewhigh.finance.view.ItemMenuInMain
+            android:id="@+id/menu_jiekuan"
+            style="@style/MainItemStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:item_icon="@drawable/main_loan"
+            app:item_title="借款单"></com.viewhigh.finance.view.ItemMenuInMain>
+        <com.viewhigh.finance.view.ItemMenuInMain
+            android:id="@+id/menu_expense"
+            android:gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            style="@style/MainItemStyle"
+            android:layout_height="wrap_content"
+            app:item_icon="@drawable/main_expense"
+            app:item_title="报销单"></com.viewhigh.finance.view.ItemMenuInMain>
+        <com.viewhigh.finance.view.ItemMenuInMain
+            android:id="@+id/menu_shenpi"
+            android:layout_width="wrap_content"
+            style="@style/MainItemStyle"
+            android:layout_height="wrap_content"
+            app:item_icon="@drawable/main_todo"
+            app:item_title="审批"></com.viewhigh.finance.view.ItemMenuInMain>
+
+    </LinearLayout>-->
+
+</LinearLayout>
