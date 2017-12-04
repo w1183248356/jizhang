@@ -11,10 +11,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.TextView;
 
 import com.jizhang.adapter.MainDrawerAdapter;
-import com.jizhang.bean.DrawerMenu;
 import com.jizhang.controller.AndroidDisplay;
 import com.jizhang.controller.MainController;
 import com.jizhang.fragment.FragmentMain;
@@ -25,7 +23,6 @@ import java.util.List;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
-import butterknife.OnClick;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -35,22 +32,12 @@ public class MainActivity extends AppCompatActivity {
     @InjectView(R.id.drawer_layout)
     DrawerLayout mDrawerLayout;
 
-//    @InjectView(R.id.button_normal_check)
-//    TextView button;
-
     @InjectView(R.id.recyclerView_drawer)
     RecyclerView drawerRecyclerView;
-
-//    @InjectView(R.id.toolbar_title_center)
-//    TextView titleCenter;
-
 
     MainController mController;
     CollapsingToolbarLayoutState state;
     private MainDrawerAdapter mainDrawerAdapter;
-    private List<DrawerMenu> dataList;
-    private DrawerMenu guishu;
-    private DrawerMenu compDrawer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,8 +45,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         ButterKnife.inject(this);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        toolbar.setTitle("");
-//        titleCenter.setText("物资盘点");
+        toolbar.setTitle("详情展示");
         setSupportActionBar(toolbar);
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -75,32 +61,6 @@ public class MainActivity extends AppCompatActivity {
         mController.setDisplay(new AndroidDisplay(this));
         mController.init();
 
-//        appBarLayout.addOnOffsetChangedListener(new AppBarLayout.OnOffsetChangedListener() {
-//            @Override
-//            public void onOffsetChanged(AppBarLayout appBarLayout, int verticalOffset) {
-//                if (verticalOffset == 0) {
-//                    if (state != CollapsingToolbarLayoutState.EXPANDED) {
-//                        state = CollapsingToolbarLayoutState.EXPANDED;//修改状态标记为展开
-//                        supportInvalidateOptionsMenu();
-//                    }
-//                } else if (Math.abs(verticalOffset) >= appBarLayout.getTotalScrollRange()) {
-//                    if (state != CollapsingToolbarLayoutState.COLLAPSED) {
-//                        state = CollapsingToolbarLayoutState.COLLAPSED;//修改状态标记为折叠
-//                        supportInvalidateOptionsMenu();
-//                    }
-//                } else {
-//                    if (state != CollapsingToolbarLayoutState.INTERNEDIATE) {
-//                        if(state == CollapsingToolbarLayoutState.COLLAPSED){
-//                            //由折叠变为中间状态
-//                            supportInvalidateOptionsMenu();
-//                        }
-//                        state = CollapsingToolbarLayoutState.INTERNEDIATE;//修改状态标记为中间
-//                    }
-//                }
-//            }
-//        });
-
-
         drawerRecyclerView.setLayoutManager(new LinearLayoutManager(this));
         mainDrawerAdapter = new MainDrawerAdapter(this);
         drawerRecyclerView.setAdapter(mainDrawerAdapter);
@@ -108,14 +68,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void loadData() {
-        dataList = new ArrayList<>();
-        DrawerMenu menu = new DrawerMenu("账套:", "未选择");
-        guishu = new DrawerMenu("资产归属:", "未选择");
-        compDrawer = new DrawerMenu("单位:","未选择");
-        dataList.add(compDrawer);
-        dataList.add(menu);
-        dataList.add(guishu);
-        mainDrawerAdapter.setData(dataList);
+        List<String> list = new ArrayList<>();
+        list.add("添加客户");
+        list.add("添加产品");
+        list.add("添加消费原因");
+        mainDrawerAdapter.setData(list);
     }
 
 
@@ -125,12 +82,15 @@ public class MainActivity extends AppCompatActivity {
         mainDrawerAdapter.setItemClickListener(new ClickRecyclerViewAdapter.OnItemClickListener() {
             @Override
             public void onItemClickListener(View view, int position) {
-                switch (position){
-                    case 0://账套
-
+                switch (position) {
+                    case 0://添加客户
+                        CommonAddActivity.launch(MainActivity.this, CommonAddActivity.ADD_USER);
                         break;
-
-                    case 1://归属
+                    case 1://添加产品
+                        CommonAddActivity.launch(MainActivity.this, CommonAddActivity.ADD_PRDT);
+                        break;
+                    case 2://添加消费原因
+                        CommonAddActivity.launch(MainActivity.this, CommonAddActivity.ADD_RESAON);
                         break;
                 }
             }
@@ -142,10 +102,8 @@ public class MainActivity extends AppCompatActivity {
     public boolean onPrepareOptionsMenu(Menu menu) {
         if (state == CollapsingToolbarLayoutState.EXPANDED || state == CollapsingToolbarLayoutState.INTERNEDIATE) {
             menu.clear();
-//            button.setVisibility(View.VISIBLE);
         } else {
-//            button.setVisibility(View.GONE);
-//            menu.add(0, 1, 0, "盘点").setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
+//
         }
         return true;
     }
@@ -161,18 +119,6 @@ public class MainActivity extends AppCompatActivity {
         INTERNEDIATE
     }
 
-//    @OnClick(R.id.button_normal_check)
-//    public void onClick(View view) {
-//        ChooseDeptStoreActivity.launch(MainActivity.this);
-//    }
-
-    /**
-     *
-     */
-    @OnClick(R.id.btn_logout)
-    public void clickLogout() {
-
-    }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {

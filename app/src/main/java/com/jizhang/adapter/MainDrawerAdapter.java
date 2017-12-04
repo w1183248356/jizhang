@@ -6,7 +6,6 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.jizhang.R;
-import com.jizhang.bean.DrawerMenu;
 import com.viewhigh.libs.adapter.ClickRecyclerViewAdapter;
 
 import java.util.List;
@@ -18,13 +17,13 @@ import java.util.List;
 public class MainDrawerAdapter extends
         ClickRecyclerViewAdapter<MainDrawerAdapter.AccountTaoHolder> {
 
-    List<DrawerMenu> mDataList;
+    List<String> mDataList;
 
     public MainDrawerAdapter(Context context) {
         super(context);
     }
 
-    public void setData(List<DrawerMenu> data){
+    public void setData(List<String> data){
         this.mDataList = data;
         notifyDataSetChanged();
     }
@@ -39,9 +38,7 @@ public class MainDrawerAdapter extends
         if(mDataList.size() <= position){
             return;
         }
-        DrawerMenu menuData = mDataList.get(position);
-        holder.name.setText(menuData.getName());
-        holder.value.setText(menuData.getValue());
+        holder.name.setText(mDataList.get(position));
 
     }
 
@@ -53,12 +50,10 @@ public class MainDrawerAdapter extends
     public static class AccountTaoHolder extends ClickRecyclerViewAdapter.ViewHolder{
 
         private TextView name;
-        private TextView value;
 
         public AccountTaoHolder(View itemView, OnItemClickListener click, OnItemLongClickListener longClick) {
             super(itemView, click, longClick);
             name = (TextView) itemView.findViewById(R.id.tv_drawer_menu_name);
-            value = (TextView) itemView.findViewById(R.id.tv_drawer_menu_value);
         }
     }
 }

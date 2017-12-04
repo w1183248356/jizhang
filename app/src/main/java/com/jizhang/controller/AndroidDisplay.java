@@ -8,9 +8,12 @@ import android.support.v4.app.FragmentManager;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 
+import com.jizhang.CommonAddActivity;
 import com.jizhang.MainActivity;
 import com.jizhang.R;
 import com.jizhang.SettingsActivity;
+import com.jizhang.fragment.AddCommonFragment;
+import com.jizhang.fragment.MainFragment;
 
 /**
  * Created by huntero on 16-12-27.
@@ -56,6 +59,18 @@ public class AndroidDisplay {
     public void showFragmentContent(Fragment fragment) {
         final FragmentManager manager = mActivity.getSupportFragmentManager();
         manager.beginTransaction().replace(R.id.content_main, fragment).commit();
+    }
+
+    public void launchAddCommonActivity(int addType){
+        CommonAddActivity.launch(mActivity, addType);
+    }
+
+    public void showAddCommonFragment(Intent intent){
+        AddCommonFragment mainFragment = new AddCommonFragment();
+        if(intent != null) {
+            mainFragment.setArguments(intent.getExtras());
+        }
+        showFragmentContent(mainFragment);
     }
 
 }

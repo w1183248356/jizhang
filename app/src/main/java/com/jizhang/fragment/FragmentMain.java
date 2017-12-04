@@ -20,10 +20,6 @@ import com.viewhigh.libs.utils.ToastUtil;
 import butterknife.InjectView;
 import butterknife.OnClick;
 
-/**
- * Created by huntero on 17-4-11.
- */
-
 public class FragmentMain extends BaseFragment<MainController.MainUi> implements
         MainController.MainUi {
 
@@ -53,17 +49,6 @@ public class FragmentMain extends BaseFragment<MainController.MainUi> implements
             @Override
             public void onScrollStateChanged(RecyclerView recyclerView, int newState) {
                 super.onScrollStateChanged(recyclerView, newState);
-            }
-
-            @Override
-            public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
-                super.onScrolled(recyclerView, dx, dy);
-                firstPosition = linearLayoutManager.findFirstVisibleItemPosition();
-                if (firstPosition > 0) {
-                    scrollToTop.setVisibility(View.VISIBLE);
-                } else {
-                    scrollToTop.setVisibility(View.INVISIBLE);
-                }
             }
         });
 

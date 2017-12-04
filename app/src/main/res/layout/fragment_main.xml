@@ -24,16 +24,15 @@
         android:id="@+id/tv_main_scrollToTop"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/ic_vertical_align_top_black_24dp"
-        android:visibility="invisible"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
         android:layout_marginBottom="20dp"
-        android:layout_marginRight="15dp"
-        app:borderWidth="0dp"
+        app:borderWidth="2dp"
         app:elevation="5dp"
         app:fabSize="normal"
-        app:backgroundTint="@android:color/white"
+        app:backgroundTint="@color/main_blue"
+        app:rippleColor="@color/main_blue_light"
         />
 
 </RelativeLayout>
