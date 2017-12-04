@@ -3,48 +3,13 @@
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
 
-    <dimen name="cardview_padding">8dp</dimen>
     <dimen name="cardview_elevation">5dp</dimen>
-    <dimen name="image_width_in_List">80dip</dimen>
 
     <dimen name="login_icon_marginTop">30dp</dimen>
-    <dimen name="login_btn_marginTop">40dp</dimen>
 
-    <!--待办-->
-    <dimen name="textsize_name">16sp</dimen>
-    <dimen name="item_approval_textsize_name">14sp</dimen>
-    <dimen name="price_textsize">18sp</dimen>
-    <dimen name="item_text_margintop">5dp</dimen>
-    <dimen name="line_height">1dp</dimen>
-    <dimen name="item_button_width">100dp</dimen>
-    <dimen name="item_button_height">30dp</dimen>
-    <dimen name="item_text_marginLeft">16dp</dimen>
-    <dimen name="dot_line_marginLeft">25dp</dimen>
-    <dimen name="item_date_textsize">12sp</dimen>
-    <dimen name="item_approval_circle_d">12dp</dimen>
-    <dimen name="item_approval_marginleft">19dp</dimen>
-    <dimen name="item_approval_card_marginleft">36dp</dimen>
-    <dimen name="item_approval_card_marginright">30dp</dimen>
-    <dimen name="item_approval_psnimage_width">36dp</dimen>
-    <dimen name="item_approval_infominheight">40dp</dimen>
-    <dimen name="cardview_corner">6dp</dimen>
-    <dimen name="cost_detail_image_width">80dp</dimen>
-
-
-    <!--借款-->
-    <dimen name="bottom_btn_height">45dp</dimen>
-    <dimen name="item_text_marginBottom">2dp</dimen>
-    <dimen name="detail_padding_vertical">8dp</dimen>
-    <dimen name="detail_padding_vertical_large">12dp</dimen>
-    <dimen name="detail_padding_horizontal">16dp</dimen>
-    <dimen name="detail_margin_vertical_large">16dp</dimen>
-    <dimen name="detail_margin_vertical__small">8dp</dimen>
-    <dimen name="detail_margin_horizontal">16dp</dimen>
-
-
-    <dimen name="main_tip_padding_vertical">8dp</dimen>
-    <dimen name="main_tip_padding_horizontal">16dp</dimen>
-    <dimen name="right_arrow_widthandheight">24dp</dimen>
-
+    <!--之前是20dp-->
+    <dimen name="scan_frame_margin_top">50dp</dimen>
+    <dimen name="action_bar_size_small">45dp</dimen>
+    <dimen name="bottom_layout_height">45dp</dimen>
 
 </resources>

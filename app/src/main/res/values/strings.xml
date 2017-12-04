@@ -1,17 +1,48 @@
 <resources>
-    <string name="app_name">OES高值跟踪</string>
-
+    <string name="app_name">记账</string>
     <string name="drawer_close">关闭</string>
     <string name="drawer_open">打开</string>
-
     <string name="no_network">当前网络不可用</string>
 
     <!-- Strings related to Settings -->
     <string name="pref_title_ip">IP地址</string>
-    <string name="pref_default_ip">192.168.130.35</string>
+    <string name="pref_default_ip">192.168.0.13</string>
     <string name="pref_title_port">端口</string>
-    <string name="pref_default_port">8080</string>
+    <string name="pref_default_port">8111</string>
     <string name="pref_title_root">根目录</string>
-    <string name="pref_default_root">webServer</string>
+    <string name="pref_default_root">oes</string>
+    <string name="normalcheck_submit">提交</string>
+    <string name="gunscan_title">枪扫码</string>
+    <string name="start_with_count">开始(%s)</string>
+    <string name="normalcheck_insertassets">选择物资字典</string>
+    <string name="assets_input">资产录入</string>
+    <string name="sure">确定</string>
+    <string name="submit">提交</string>
+    <string name="not_check">未盘</string>
+    <string name="normal">正常</string>
+    <string name="panying">盘盈</string>
+    <string name="pankui">盘亏</string>
+    <string name="place_error">位置不符</string>
+    <string name="no_code">编码(无)</string>
+    <string name="have_code">编码：</string>
+    <string name="no_name">名称(无)</string>
+    <string name="have_name">名称：</string>
+    <string name="no_batchNo">生产批号(无)</string>
+    <string name="have_batchNo">生产批号:</string>
+    <string name="no_locationName">货位(无)</string>
+    <string name="have_locationName">货位:</string>
+    <string name="assets_detail">资产详情</string>
+    <string name="no_specification">规格(无)</string>
+    <string name="have_specification">规格:</string>
+    <string name="no_model">型号(无)</string>
+    <string name="have_model">型号:</string>
+    <string name="change_position">更改货位</string>
+    <string name="inv_classify_name">物资分类名称：</string>
+    <string name="inv_code">物资编码：</string>
+    <string name="inv_name">物资名称：</string>
+    <string name="cert_code">证件号码：</string>
+    <string name="factory_name">生成厂商：</string>
 
+    <item name="tag1" type="id"/>
+    <item name="tag2" type="id"/>
 </resources>

@@ -14,10 +14,6 @@ import java.util.List;
 
 import butterknife.InjectView;
 
-/**
- * Created by huntero on 17-5-22.
- */
-
 public class MainFragment extends BaseFragment<MainController.MainUi> implements
         MainController.MainUi {
     private MainController.MainCallback mCallback;
@@ -45,7 +41,7 @@ public class MainFragment extends BaseFragment<MainController.MainUi> implements
     @Override
     public void onResume() {
         super.onResume();
-        mAdapter.setItemClickListener(mCallback);
+//        mAdapter.setItemClickListener(mCallback);
     }
 
     @Override
@@ -56,15 +52,5 @@ public class MainFragment extends BaseFragment<MainController.MainUi> implements
     @Override
     protected int getLayoutId() {
         return R.layout.main_content;
-    }
-
-    @Override
-    public void refreshMenuList(List<MainItem> data) {
-        mAdapter.setData(data);
-    }
-
-    @Override
-    public void showNoCompCopyDialog() {
-//        AlertUtil.showNoCopyCode(getActivity());
     }
 }

@@ -6,52 +6,124 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="actionMenuTextAppearance">@style/MenuTextStyle</item>
+        <item name="searchViewStyle">@style/Widget.SearchView</item>
+        <item name="actionOverflowMenuStyle">@style/OverflowMenuStyle</item>
     </style>
-
-    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
-
-    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
-
+    <style name="MenuTextStyle">
+        <item name="android:textSize">15sp</item>
+    </style>
     <style name="AppTheme.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
+
+    <style name="Login_ButtonSelectWebInLogin" parent="@style/Widget.AppCompat.Button.Colored">
+        <item name="android:background">@drawable/bg_btn_select_service</item>
+        <item name="android:textColor">@drawable/text_yellow_to_white_selector</item>
+    </style>
+    <style name="ButtonSelectWebInLogin" parent="@style/Widget.AppCompat.Button.Colored">
+        <item name="android:background">@drawable/bg_btn_select_service</item>
+        <item name="android:textColor">@drawable/text_yellow_to_white_selector</item>
+    </style>
+
 
     <style name="CardViewStyle">
         <item name="cardPreventCornerOverlap">true</item>
-        <item name="android:foreground">?android:attr/selectableItemBackground</item>
-        <item name="android:clickable">true</item>
-        <item name="contentPadding">@dimen/cardview_padding</item>
+        <item name="cardUseCompatPadding">true</item>
     </style>
     <style name="CardViewStyle.Shade">
         <item name="cardElevation">@dimen/cardview_elevation</item>
         <item name="cardCornerRadius">1dp</item>
-        <item name="cardUseCompatPadding">true</item>
     </style>
-    <style name="CardViewStyle.NoShade">
-        <item name="cardUseCompatPadding">false</item>
-        <item name="cardElevation">0dp</item>
-        <item name="cardCornerRadius">0dp</item>
-    </style>
-
-    <style name="CardViewStyle.NoShadeNoPadding">
-        <item name="cardUseCompatPadding">false</item>
-        <item name="cardElevation">0dp</item>
-        <item name="cardCornerRadius">0dp</item>
-        <item name="contentPadding">0dp</item>
-    </style>
-
-
-    <style name="DrawableCenterTextStyle">
-        <item name="android:drawablePadding">8dp</item>
-        <item name="android:paddingBottom">8dp</item>
-        <item name="android:paddingTop">8dp</item>
+    <style name="CardViewStyle.Clickable">
+        <item name="android:foreground">?android:attr/selectableItemBackground</item>
         <item name="android:clickable">true</item>
-        <item name="android:textSize">18sp</item>
     </style>
-    <style name="DrawableCenterTextStyle.Weight">
-        <item name="android:layout_weight">1</item>
+    <style name="CardViewStyle.Shade.Clickable" parent="CardViewStyle.Clickable">
+
     </style>
+
+
+    <style name="ListItemText">
+        <item name="android:layout_marginLeft">8dp</item>
+        <item name="android:paddingTop">4dp</item>
+        <item name="android:paddingBottom">2dp</item>
+    </style>
+    <style name="ListItemText.Title">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">#2b2b2b</item>
+    </style>
+    <style name="ListItemText.Subtitle">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#434343</item>
+    </style>
+    <style name="ListItemText.Extra">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">#9f9f9f</item>
+    </style>
+
+    <style name="Widget.SearchView" parent="Widget.AppCompat.SearchView">
+        <item name="defaultQueryHint">请输入关键字</item>
+        <item name="queryBackground">@drawable/abc_textfield_search_material</item>
+        <item name="submitBackground">@drawable/abc_textfield_search_material</item>
+        <item name="commitIcon">@drawable/abc_ic_commit_search_api_mtrl_alpha</item>
+        <item name="closeIcon">@mipmap/ic_launcher</item>
+    </style>
+
+    <style name="checkdialog" parent="@android:style/Theme.Holo.Dialog">
+        <!-- 是否有边框 -->
+        <item name="android:windowFrame">@null</item>
+        <!--是否在悬浮Activity之上  -->
+        <item name="android:windowIsFloating">true</item>
+        <!--标题  -->
+        <item name="android:windowNoTitle">true</item>
+        <!--阴影  -->
+        <item name="android:windowIsTranslucent">true</item><!--半透明-->
+        <!-- 进入和退出的动画 -->
+        <item name="android:windowAnimationStyle">@style/MyDialogAnimation</item>
+        <!-- 点外边可以消失  -->
+        <item name="android:windowCloseOnTouchOutside">true</item>
+        <item name="android:background">@android:color/white</item>
+    </style>
+
+    <style name="MyDialogAnimation">
+        <!--进入 -->
+        <item name="android:windowEnterAnimation">@anim/dialog_enter</item>
+        <!--退出-->
+        <item name="android:windowExitAnimation">@anim/dialog_exit</item>
+    </style>
+
+    <style name="OverflowMenuStyle" parent="@style/Widget.AppCompat.PopupMenu.Overflow">
+        <!-- 是否覆盖锚点，默认为true，即盖住Toolbar -->
+        <item name="overlapAnchor">false</item>
+        <item name="android:dropDownWidth">wrap_content</item>
+        <item name="android:paddingRight">5dp</item>
+        <!-- 弹出层背景颜色 -->
+        <item name="android:popupBackground">@drawable/bg_radius_white</item>
+        <!-- 弹出层垂直方向上的偏移，即在竖直方向上距离Toolbar的距离，值为负则会盖住Toolbar -->
+        <item name="android:dropDownVerticalOffset">0dp</item>
+        <!-- 弹出层水平方向上的偏移，即距离屏幕左边的距离，负值会导致右边出现空隙 -->
+        <!--<item name="android:dropDownHorizontalOffset">-10dp</item>-->
+        <!-- 设置弹出菜单文字颜色 -->
+        <!--<item name="android:textColor">@color/white</item>-->
+    </style>
+
+    <style name="InvalidScanDialog" parent="android:style/Theme.Dialog">
+        <item name="android:background">#00000000</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+    </style>
+
+
+    <!--<item name="closeIcon">@drawable/abc_ic_clear_mtrl_alpha</item>
+    <item name="searchIcon">@drawable/abc_ic_search_api_mtrl_alpha</item>
+    <item name="searchHintIcon">@drawable/abc_ic_search_api_mtrl_alpha</item>
+    <item name="goIcon">@drawable/abc_ic_go_search_api_mtrl_alpha</item>
+    <item name="voiceIcon">@drawable/abc_ic_voice_search_api_mtrl_alpha</item>-->
 
     <style name="DividerStyle">
         <item name="android:background">#EEE</item>
@@ -62,24 +134,28 @@
     <style name="DividerStyle.Horizontal.thin">
         <item name="android:layout_height">1dp</item>
     </style>
-
     <style name="DividerStyle.Horizontal.fat">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">8dp</item>
     </style>
 
-    <style name="OverflowMenuStyle" parent="@style/Widget.AppCompat.PopupMenu.Overflow">
-        <!-- 是否覆盖锚点，默认为true，即盖住Toolbar -->
-        <item name="overlapAnchor">false</item>
-        <item name="android:dropDownWidth">wrap_content</item>
-        <item name="android:paddingRight">5dp</item>
-        <!-- 弹出层背景颜色 -->
-        <!--<item name="android:popupBackground">@color/darkturquoise</item>-->
-        <!-- 弹出层垂直方向上的偏移，即在竖直方向上距离Toolbar的距离，值为负则会盖住Toolbar -->
-        <item name="android:dropDownVerticalOffset">5dp</item>
-        <!-- 弹出层水平方向上的偏移，即距离屏幕左边的距离，负值会导致右边出现空隙 -->
-        <!--<item name="android:dropDownHorizontalOffset">0dp</item>-->
-        <!-- 设置弹出菜单文字颜色 -->
-        <!--<item name="android:textColor">@color/white</item>-->
+    <style name="CardViewStyle.NoShade">
+        <item name="cardUseCompatPadding">false</item>
+        <item name="cardElevation">0dp</item>
+        <item name="cardCornerRadius">0dp</item>
+    </style>
+
+    <style name="LoginStyle"></style>
+    <style name="LoginStyle.Input">
+        <item name="android:lines">1</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColorHint">#999</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingRight">16dp</item>
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:background">@drawable/bg_login_edit</item>
     </style>
 </resources>
